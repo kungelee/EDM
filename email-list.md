@@ -27,8 +27,8 @@ grep -oP '[\w.-]+@[\w.-]+\.[\w]{2,6}' google-email-list.txt  | grep -E "surpport
 grep -oP '[\w.-]+@[\w.-]+\.[\w]{2,6}' google-email-list.txt  | grep -v -E "surpport|contact|admin|domain"
 
 ## split 切分文件
-split -l 500 -d result.txt ./tmp/send-  
-ren * *.txt
+说明：-d 数字 （默认是2位，可以-a 数字）  
+split -l 500 -d --additional-suffix=.txt  apperesult.txt ./tmp/send-
 
 参考链接：  
 https://blog.csdn.net/h4241778/article/details/122527463
