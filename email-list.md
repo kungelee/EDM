@@ -21,6 +21,13 @@ https://seaside.blog.csdn.net/article/details/124121603
 去除包含#  和空行:  
 cat test.log | grep -v "#" | grep -v "^$"
 
+显示匹配的行
+grep -oP '[\w.-]+@[\w.-]+\.[\w]{2,6}' google-email-list.txt  | grep -E "surpport|contact|admin|domain"
+
+显示不匹配的行 （ -v, --invert-match        select non-matching lines）
+grep -oP '[\w.-]+@[\w.-]+\.[\w]{2,6}' google-email-list.txt  | grep -v -E "surpport|contact|admin|domain"
+
+
 参考链接：  
 https://blog.csdn.net/h4241778/article/details/122527463
 
