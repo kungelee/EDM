@@ -26,6 +26,9 @@ grep -oP '[\w.-]+@[\w.-]+\.[\w]{2,6}' google-email-list.txt  | grep -E "surpport
 **显示不匹配的行** （grep --help: -v, --invert-match        select non-matching lines）  
 grep -oP '[\w.-]+@[\w.-]+\.[\w]{2,6}' google-email-list.txt  | grep -v -E "surpport|contact|admin|domain"
 
+## split 切分文件
+split -l 500 -d result.txt ./tmp/send-  
+ren * *.txt
 
 参考链接：  
 https://blog.csdn.net/h4241778/article/details/122527463
