@@ -28,7 +28,7 @@ grep -oP '[\w.-]+@[\w.-]+\.[\w]{2,6}' google-email-list.txt  | grep -v -E "surpp
 
 ## split 切分文件
 说明：-d 数字 （默认是2位，可以-a 数字）  
-split -l 500 -d --additional-suffix=.txt  apperesult.txt ./tmp/send-
+split -l 500 -d --additional-suffix=.txt result.txt ./tmp/send-
 
 参考链接：  
 https://blog.csdn.net/h4241778/article/details/122527463
