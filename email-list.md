@@ -26,6 +26,9 @@ grep -oP '[\w.-]+@[\w.-]+\.[\w]{2,6}' google-email-list.txt  | grep -E "surpport
 **显示不匹配的行** （grep --help: -v, --invert-match        select non-matching lines）  
 grep -oP '[\w.-]+@[\w.-]+\.[\w]{2,6}' google-email-list.txt  | grep -v -E "surpport|contact|admin|domain"
 
+** Error: -P supports only unibyte and UTF-8 locales
+在 MSYS2 环境下执行
+
 ## split 切分文件
 说明：-d 数字 （默认是2位，可以-a 数字）  
 split -l 500 -d --additional-suffix=.txt result.txt ./tmp/send-
